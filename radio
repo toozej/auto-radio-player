@@ -1,0 +1,14 @@
+#!/bin/bash
+radio_conf="/etc/radio.conf"
+
+# Generate a random index within the range of the radio.conf file
+index=$((1 + RANDOM % $(wc -l "${radio_conf}" | awk '{print $1}')))
+
+# Access the randomly selected radio stream URL
+radio_url=$(sed -n "${index}p" "${radio_conf}")
+
+# find mplayer binary, or quit if not installed
+mplayer_bin=$(command -v mplayer) || exit 1
+
+# play the radio!
+"${mplayer_bin}" -quiet -nolirc -cache 4096 -prefer-ipv4 -allow-dangerous-playlist-parsing "${radio_url}"
