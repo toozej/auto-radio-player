@@ -4,7 +4,7 @@
 ## Intro
 Auto Radio Player is a quick and simple script to install a SystemD service unit for automatically playing a variety of Internet radio stations on system startup and rotating daily.
 
-In particular this service was designed to be ran headlessly on a Raspberry Pi running a Debian-based distro, and outputting audio to the 3.5mm aux jack. And since it is designed to be ran headlessly, automatic unattended updates with automatic reboots are also enabled.
+In particular this service was designed to be ran headlessly on a Raspberry Pi running a modern Debian-based distro (Debian Bookworm or newer), and outputting audio to the 3.5mm aux jack. And since it is designed to be ran headlessly, automatic unattended updates with automatic reboots are also enabled.
 
 Radio stations pre-installed:
 - [Radio Free Fedi "Comfy" mp3 stream](https://radiofreefedi.net/)

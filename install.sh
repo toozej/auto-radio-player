@@ -6,8 +6,8 @@ echo "updating and installing required packages"
 # update to latest packages all around
 apt-get update -qq && apt-get upgrade -y
 
-# install mplayer and unattended-upgrades packages
-apt-get install -y mplayer unattended-upgrades curl
+# install required packages
+apt-get install -y mplayer unattended-upgrades curl jq
 
 
 # set radio stream URLs list:
@@ -33,7 +33,7 @@ echo "Radio stream URLs set to: $(cat /etc/radio.conf)"
 
 
 # setup script to randomly select radio stream and start playback
-curl -O /usr/local/bin/radio --location --remote-header-name --remote-name https://raw.githubusercontent.com/toozej/auto-radio-player/main/radio
+curl --silent -o /usr/local/bin/radio --location https://raw.githubusercontent.com/toozej/auto-radio-player/main/radio
 chmod 0775 /usr/local/bin/radio
 
 
