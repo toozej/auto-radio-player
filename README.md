@@ -23,12 +23,12 @@ If one so desired, this setup could be adjusted to play any other audio file or 
 
 One-liner if you like to live dangerously:
 ```bash
-curl -s -L https://github.com/toozej/auto-radio-player/blob/main/install.sh | sudo bash
+curl -s -L https://raw.githubusercontent.com/toozej/auto-radio-player/main/install.sh | sudo bash
 ```
 
 If you'd like to use a different radio station (or file):
 ```bash
-curl -s -L https://github.com/toozej/auto-radio-player/blob/main/install.sh | sudo bash -s AUDIO_FILE_OR_STREAM_GOES_HERE
+curl -s -L https://raw.githubusercontent.com/toozej/auto-radio-player/main/install.sh | sudo bash -s AUDIO_FILE_OR_STREAM_GOES_HERE
 ```
 
 If you prefer git:
