@@ -27,7 +27,7 @@ else
     done <<< "${somafm_channels}"
 
     # append Radio Free Fedi
-    echo "http://217.20.116.68:8055/comfy" >> ${radio_conf}
+    echo "http://relay.radiofreefedi.net/listen/comfy/comfy.mp3" >> ${radio_conf}
 fi
 echo "Radio stream URLs set to: $(cat /etc/radio.conf)"
 
